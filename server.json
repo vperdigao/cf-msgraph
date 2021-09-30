@@ -1,0 +1,14 @@
+{
+    "debug":true,
+    "openBrowser":true,
+    "web":{
+        "HTTP":{
+            "enable":true,
+            "port":8181
+        }
+    },
+    "app":{
+        "cfengine":"adobe@2018",
+        "restMappings":"/rest/*,/api/*"
+    }
+}
