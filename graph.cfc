@@ -5,7 +5,7 @@
 		
 		<cfset local.return = structNew()>
 
-		<cfset private.url = "https://login.microsoftonline.com/e4388205-954b-4a6d-a178-4fc43ba71002/oauth2/v2.0/token">
+		<cfset private.url = "https://login.microsoftonline.com/#application.graph.user.tenantID#/oauth2/v2.0/token">
 
 		<cftry>
 			<cfhttp method="post" charset="utf-8" url="#private.url#" result="token">
@@ -30,7 +30,7 @@
 				<cfset local.return.data = deserializeJSON(jsonTokenResposta)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = token>
 			</cfif>
 
@@ -71,7 +71,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -84,7 +84,7 @@
 		<cfreturn local.return>
 	</cffunction>
 
-	<cffunction name="createDirectory" returntype="struct" access="public" hint="Creates a new directory and return all it´s information">
+	<cffunction name="createDirectory" returntype="struct" access="public" hint="Creates a new directory and return all itÂ´s information">
 		<cfargument required="true" name="token" type="struct" default="">
 		<cfargument required="true" name="directory" type="string" default="">
 		
@@ -122,7 +122,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -135,7 +135,7 @@
 		<cfreturn local.return>
 	</cffunction>
 
-	<cffunction name="deleteDirectory" returntype="struct" access="public" hint="Delete a directory and it´s contents">
+	<cffunction name="deleteDirectory" returntype="struct" access="public" hint="Delete a directory and itÂ´s contents">
 		<cfargument required="true" name="token" type="struct" default="">
 		<cfargument required="true" name="id" type="string" default="">
 		
@@ -164,7 +164,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -177,7 +177,7 @@
 		<cfreturn local.return>
 	</cffunction>
 
-	<cffunction name="uploadFile" returntype="struct" access="public" hint="Send a file to a directory - maximum upload limit 4mb (It´s Microsoft, not me!)">
+	<cffunction name="uploadFile" returntype="struct" access="public" hint="Send a file to a directory - maximum upload limit 4mb (ItÂ´s Microsoft, not me!)">
 		<cfargument required="true" name="token" type="struct" default="">
 		<cfargument required="true" name="drive" type="struct" default="">
 		<cfargument required="true" name="directory" type="struct" default="">
@@ -210,7 +210,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -264,7 +264,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -312,7 +312,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -352,7 +352,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -394,7 +394,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -436,7 +436,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -479,7 +479,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -522,7 +522,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -587,7 +587,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -630,7 +630,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -686,7 +686,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -743,7 +743,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -827,7 +827,7 @@
 				<cfset local.return.dataRequisicao = local.dadosJson>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 				<cfset local.return.dataRequisicao = local.dadosJson>
 			</cfif>
@@ -872,7 +872,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -923,7 +923,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -965,7 +965,7 @@
 				<cfset local.return.data = deserializeJSON(jsonResponse)>
 			<cfelse>
 				<cfset local.return.code = "500">
-				<cfset local.return.message = "Erro ao consumir o serviço">
+				<cfset local.return.message = "Erro ao consumir o serviÃ§o">
 				<cfset local.return.data = httpResult>
 			</cfif>
 
@@ -994,7 +994,7 @@
 			</cfif>
 
 			<cfcatch type="any">
-				<cfset local.return = "Erro ao transformar o binário">
+				<cfset local.return = "Erro ao transformar o binÃ¡rio">
 			</cfcatch>
 		</cftry>
 
@@ -1015,7 +1015,7 @@
 			</cfif>
 
 			<cfcatch type="any">
-				<cfset local.return = "Erro ao processar o binário">
+				<cfset local.return = "Erro ao processar o binÃ¡rio">
 			</cfcatch>
 		</cftry>
 
