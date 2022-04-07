@@ -7,7 +7,8 @@ Create an Application.cfc with your Drive/Sharepoint credentials like the one be
 <cfcomponent>
 
 	<cffunction name="onApplicationStart">
-
+		
+		<cfset application.graph.user.tenantID = "">
 		<cfset application.graph.user.id = "">
 		<cfset application.graph.user.email = "">
 		<cfset application.graph.user.password = "">
